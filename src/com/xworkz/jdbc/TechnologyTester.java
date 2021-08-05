@@ -13,11 +13,11 @@ public class TechnologyTester {
 		String url = "jdbc:mysql://localhost:3306/may_transformers";
 		String fqnOfDriverImpl = "com.mysql.cj.jdbc.Driver";
 		Connection connection = null;
-		
+
 		try {
 			Class.forName(fqnOfDriverImpl);
-			connection = DriverManager.getConnection(url,username,password);
-			
+			connection = DriverManager.getConnection(url, username, password);
+
 			Statement statement = connection.createStatement();
 			String query1 = "INSERT INTO technology VALUES(2, 'JAVA', 'James Gosling',1995, 'Java SE 16')";
 			String query2 = "INSERT INTO technology VALUES(3, 'Java Script', 'Brendan Eich',1995, 'ES6')";
@@ -29,20 +29,20 @@ public class TechnologyTester {
 			statement.execute(query3);
 			statement.execute(query4);
 
-			System.out.println(connection); 	
-			//System.exit(0);
-		} catch(SQLException e) {
+			System.out.println(connection);
+			// System.exit(0);
+		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
-		} finally {	
-				try {
-					connection.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
-		
+
 	}
 
 }
