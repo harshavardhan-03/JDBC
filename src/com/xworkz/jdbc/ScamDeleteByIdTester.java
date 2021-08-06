@@ -10,8 +10,8 @@ public class ScamDeleteByIdTester {
 	public static void main(String[] args) {
 
 		String username = "root";
-		String password = "Anusha@1";
-		String url = "jdbc:mysql://localhost:3306/anushasri_ks";
+		String password = "Harsha123@";
+		String url = "jdbc:mysql://localhost:3306/may_transformers";
 
 		try (Connection connection = DriverManager.getConnection(url, username, password)) {
 			Statement statement = connection.createStatement();
