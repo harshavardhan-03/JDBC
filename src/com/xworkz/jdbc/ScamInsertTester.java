@@ -34,7 +34,7 @@ public class ScamInsertTester {
 			String query17 = "INSERT INTO scam VALUES(17,'CommonWealth Games Scam', 'Cheating and forgery', 2010, 'Suresh Kalmadi', '70,000crore', 'India', 'He was accused of corruption and malpractices in the common wealth games')";
 			String query18 = "INSERT INTO scam VALUES(18,'Social Media Scam', 'Online store', 2020, 'Shoppie', '117 million', 'India', 'The Shoppie is a very high suspicious website which dont respond after taking orders')";
 			String query19 = "INSERT INTO scam VALUES(19,'Saradha Group Fund scam','Financial',2013,'Saradha Group company',2500crore,'Kolkata','he money was collected through a wide network of agents, who were paid commissions of over 25 per cent.Variety of collective investment schemes')";
-			String query20 = "INSERT INTO scam VALUES(20,(15,'Bellary mining scam','Mining leases',2011,'Reddy brothers',2000 crore,'Bellary','Reddy brothers paid huge money for their mining company named Obulapuram mining Company. It involes  forest areas and Mining in a Larger area than permitted')";
+			String query20 = "INSERT INTO scam VALUES(20,'Bellary mining scam','Mining leases',2011,'Reddy brothers',2000 crore,'Bellary','Reddy brothers paid huge money for their mining company named Obulapuram mining Company. It involes  forest areas and Mining in a Larger area than permitted')";
 			statement.execute(query1);
 			statement.execute(query2);
 			statement.execute(query3);
