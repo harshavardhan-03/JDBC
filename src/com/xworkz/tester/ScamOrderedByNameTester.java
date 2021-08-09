@@ -24,6 +24,7 @@ public class ScamOrderedByNameTester {
 			ResultSet resultSet = statement.getResultSet();
 			ScamDTO dto = null;
 			while (resultSet.next()) {
+
 				int id = resultSet.getInt("s_id");
 				String name = resultSet.getString("s_name");
 				String type = resultSet.getString("s_type");

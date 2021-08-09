@@ -10,7 +10,7 @@ public class ScamInsertTester {
 	public static void main(String[] args) {
 
 		String username = "root";
-		String password = "Harsha@1";
+		String password = "Harsha123@";
 		String url = "jdbc:mysql://localhost:3306/may_transformers";
 
 		try (Connection connection = DriverManager.getConnection(url, username, password)) {

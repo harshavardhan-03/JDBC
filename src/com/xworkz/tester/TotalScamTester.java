@@ -12,9 +12,11 @@ public class TotalScamTester {
 
 	public static void main(String[] args) {
 		try (Connection connection = DriverManager.getConnection(url, username, password)) {
+			connection.setAutoCommit(false);
 			String query = "SELECT * FROM scam";
 			Statement statement = connection.createStatement();
 			statement.execute(query);
+			connection.commit();
 			ResultSet resultSet = statement.getResultSet();
 			int count = 0;
 			while (resultSet.next()) {

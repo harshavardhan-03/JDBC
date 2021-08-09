@@ -20,6 +20,7 @@ public class ScamOrderedByIdDescTester {
 			String query = "SELECT * FROM scam ORDER BY s_id DESC";
 			Statement statement = connection.createStatement();
 			statement.execute(query);
+			connection.commit();
 			ResultSet resultSet = statement.getResultSet();
 			ScamDTO dto = new ScamDTO();
 			while (resultSet.next()) {
@@ -33,7 +34,7 @@ public class ScamOrderedByIdDescTester {
 				String description = resultSet.getString("s_description");
 				dto = new ScamDTO(id, name, type, year, by, amount, location, description);
 				System.out.println(dto);
-				connection.commit();
+				
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

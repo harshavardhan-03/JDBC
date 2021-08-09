@@ -20,6 +20,7 @@ public class OldestScamTester {
 			String query = "SELECT * FROM scam WHERE s_year = (SELECT MIN(s_year) FROM scam)";
 			Statement statement = connection.createStatement();
 			statement.execute(query);
+			connection.commit();
 			ResultSet resultSet = statement.getResultSet();
 			ScamDTO dto = new ScamDTO();
 			while (resultSet.next()) {
@@ -33,7 +34,7 @@ public class OldestScamTester {
 				String description = resultSet.getString("s_description");
 				dto = new ScamDTO(id, name, type, year, by, amount, location, description);
 				System.out.println("Oldest scam" + dto);
-				connection.commit();
+				
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

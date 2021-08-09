@@ -10,7 +10,7 @@ public class JdbcTester {
 	public static void main(String[] args) {
 
 		String username = "root";
-		String password = "Harsha@1";
+		String password = "Harsha123@";
 		String url = "jdbc:mysql://localhost:3306/may_transformers";
 		
 		// protocol:vendor://hostname(ipaddress):port/schema_name
