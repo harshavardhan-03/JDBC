@@ -13,19 +13,19 @@ public class CustomerSaveAllTester {
 	public static void main(String[] args) {
 
 		CustomerService service = new CustomerServiceImpl();
-		CustomerDTO dto1 = new CustomerDTO("Pavan", "Chennai", "Paris", "Thangavel street, Hindipur", false,
+		CustomerDTO dto1 = new CustomerDTO("Bhanu", "Vizag", "Paris", "Thangavel street, Vizag", false,
 				123456781, Education.BE);
-		CustomerDTO dto2 = new CustomerDTO("Harsha", "Vizag", "Delhi", "Venugopal nagar, Anantapur", false,
+		CustomerDTO dto2 = new CustomerDTO("Harsha", "Ananthapur", "Goa", "Venugopal nagar, Ananthapur", false,
 				123456782, Education.BE);
-		CustomerDTO dto3 = new CustomerDTO("Bhanu", "Bangalore", "Vijayawada", "RK nagar, Anantapur", false, 123456783,
-				Education.BE);
-		CustomerDTO dto4 = new CustomerDTO("Hema", "Mangalore", "Chennai", "Arch Gate, Anantapur", true, 123456784,
-				Education.ME);
-		CustomerDTO dto5 = new CustomerDTO("Nawaz", "Bangalore", "Goa", "Gorimedu, Anantapur", false, 123456785, Education.MBA);
-
+		CustomerDTO dto3 = new CustomerDTO("Pavan", "Bangalore", "Hyderabad", "RK nagar, Tumkur", false,
+				123456783, Education.BE);
+		CustomerDTO dto4 = new CustomerDTO("Aravind", "Hindupur", "Chennai", "Arch Gate, Hindupur", false,
+				123456784, Education.ME);
+		CustomerDTO dto5 = new CustomerDTO("Hema", "Anantapur", "Goa", "Gorimedu, Anantapur", false,
+				123456785, Education.MBA);
+		
 		Collection<CustomerDTO> collection = Arrays.asList(dto1, dto2, dto3, dto4, dto5);
 		service.ValidateAndSaveAll(collection);
-		collection.forEach(r -> System.out.println(r));
 
 	}
 

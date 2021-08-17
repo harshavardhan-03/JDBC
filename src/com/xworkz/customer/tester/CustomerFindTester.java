@@ -16,7 +16,7 @@ public class CustomerFindTester {
 		Collection<CustomerDTO> collection = service.findAll();
 		collection.forEach(r -> System.out.println(r));
 
-		collection = service.findAll((a) -> a.getTo().equals("Paris"));
+		collection = service.findAll((a) -> a.getTo().equals("Bangalore"));
 		collection.forEach(r -> System.out.println(r));
 
 		collection = service.findAllSortByNameDesc();
